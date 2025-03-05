@@ -1,0 +1,49 @@
+:root{
+    --Primary : #34495E;
+    --Secondary : #BDC3C7;
+    --Background : #FFFFFF;
+    --TexColor : #2C3E50;
+    --Accentfärg : #F1C40F;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--Background);
+}
+
+
+/*#Region style för navbar*/
+nav{
+    background-color: var(--Primary);
+}
+
+nav a{
+    color: var(--Secondary);
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+nav a:hover{
+    border-bottom: 3px solid var(--Accentfärg);
+}
+/*#endregion*/
+
+#Home{
+    height: 300px;
+}
+
+#Worklife{
+    height: 300px;
+}
+
+#School{
+    height: 300px;
+}
+
+#Hobie{
+    height: 300px;
+}
