@@ -33,7 +33,7 @@ nav a:hover{
 /*#endregion*/
 
 #Home{
-    height: 300px;
+    margin-bottom: 20px;
 }
 
 #Worklife{
@@ -46,4 +46,10 @@ nav a:hover{
 
 #Hobie{
     height: 300px;
+}
+
+
+.fontHome{
+    font-size: 1.5rem;
+    color: var(--TexColor);
 }
