@@ -34,11 +34,10 @@ function Home() {
 
     return (
         <>
-            <h1 id="Home">Home</h1>
-            <div className="container">
-                <div className="row">
-                    <div className="col-4">
-                        <img src={profilbild} alt="Profilbild" className="w-75 h-75 rounded-circle" />
+            <div className="container-fluid" id="Home">
+                <div className="row ">
+                    <div className="col-4 d-flex justify-content-center align-items-center bgProfilePicture">
+                        <img src={profilbild} alt="Profilbild" className="w-75 h-75" />
                     </div>
                     <div className="col-8 pt-5">
                         <div className="row mt-5">

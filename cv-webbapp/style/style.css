@@ -1,55 +1,87 @@
-:root{
-    --Primary : #34495E;
-    --Secondary : #BDC3C7;
-    --Background : #FFFFFF;
-    --TexColor : #2C3E50;
-    --Accentfärg : #F1C40F;
+:root {
+    --Primary: #34495E;
+    --Secondary: #BDC3C7;
+    --Background: #FFFFFF;
+    --TexColor: #2C3E50;
+    --Accentfärg: #F1C40F;
 }
 
-html{
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background-color: var(--Background);
 }
 
 
 /*#Region style för navbar*/
-nav{
+nav {
     background-color: var(--Primary);
 }
 
-nav a{
+nav a {
     color: var(--Secondary);
     border-bottom: 3px solid transparent;
     text-decoration: none;
     font-size: 1.25rem;
 }
 
-nav a:hover{
+nav a:hover {
     border-bottom: 3px solid var(--Accentfärg);
 }
+
 /*#endregion*/
 
-#Home{
-    margin-bottom: 20px;
+
+.fontHome {
+    font-size: 1.5rem;
+    color: var(--TexColor);
 }
 
-#Worklife{
-    height: 300px;
+
+.bgProfilePicture {
+    background-color: var(--TexColor);
 }
 
-#School{
-    height: 300px;
+.textColor{
+    color: var(--Secondary);
 }
+
+
+/*#region scrollbar*/
+/*Ytan för scrollbar*/
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: var(--Primary);
+
+}
+
+/*Spåret som den går i*/
+::-webkit-scrollbar-track {
+    background-color: var(--Background);
+    margin-top: 65px;
+}
+
+/*Själva scrollbaren*/
+::-webkit-scrollbar-thumb {
+    background-color: var(--Primary);
+    border-radius: 10px;
+    border: 3px solid var(--Background); 
+}
+
+/*Vidrörande av scrollbaren*/
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--TexColor);
+}
+
+/*#endregion*/
 
 #Hobie{
     height: 300px;
-}
-
-
-.fontHome{
-    font-size: 1.5rem;
-    color: var(--TexColor);
 }

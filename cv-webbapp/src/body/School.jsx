@@ -1,11 +1,18 @@
 
 
-function School(){
+function School() {
 
-    return(
-        <>
-            <h1 id="School">School</h1>
-        </>
+    return (
+        <div id="School" className="container-fluid">
+            <div className="row">
+                <div className="col-4 bgProfilePicture d-flex justify-content-center">
+                    <h1 className="textColor">School</h1>
+                </div>
+                <div className="col-8">
+                    <p className="mt-2">Webbutvecklarprogrammet på Handelshögskolan vid Karlstads universitet</p>
+                </div>
+            </div>
+        </div>
     )
 }
 
