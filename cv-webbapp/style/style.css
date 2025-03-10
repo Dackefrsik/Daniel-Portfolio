@@ -1,3 +1,4 @@
+/*Variable för färger*/
 :root {
     --Primary: #34495E;
     --Secondary: #BDC3C7;
@@ -19,7 +20,6 @@ body {
     background-color: var(--Background);
 }
 
-
 /*#Region style för navbar*/
 nav {
     background-color: var(--Primary);
@@ -35,22 +35,23 @@ nav a {
 nav a:hover {
     border-bottom: 3px solid var(--Accentfärg);
 }
-
 /*#endregion*/
 
-
+/*Font i komponenten Home*/
 .fontHome {
     font-size: 1.5rem;
     color: var(--TexColor);
 }
 
-
+/*Färgen på vänster sida*/
 .bgProfilePicture {
     background-color: var(--TexColor);
 }
 
+/*Style text*/
 .textColor{
     color: var(--Secondary);
+    border-bottom: 3px solid var(--Accentfärg); /*Behöver en ny rad för varje element som ska in i vänsterkolumenen*/
 }
 
 
@@ -82,6 +83,8 @@ nav a:hover {
 
 /*#endregion*/
 
-#Hobie{
+
+/*Test CSS*/
+/* #Hobie{
     height: 300px;
-}
+} */

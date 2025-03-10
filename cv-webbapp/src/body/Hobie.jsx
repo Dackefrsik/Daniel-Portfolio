@@ -10,7 +10,19 @@ function Hobie() {
                 </div>
                 <div className="col-8">
                     <p className="mt-2">Resa</p>
+
+
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-4 bgProfilePicture"></div>
+                <div className="col-8">
                     <p>Träna</p>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-4 bgProfilePicture"></div>
+                <div className="col-8">
                     <p>Programmera</p>
                 </div>
             </div>
