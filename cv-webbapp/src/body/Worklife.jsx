@@ -11,9 +11,7 @@ function Worklife() {
                 </div>
                 <div className="col-8">
                     <p className="mt-2">Jula</p>
-
                 </div>
-
             </div>
             <div className="row">
                 <div className="col-4 bgProfilePicture d-flex justify-content-center"></div>
