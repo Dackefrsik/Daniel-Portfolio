@@ -91,6 +91,19 @@ nav a:hover {
     transform: rotateY(0deg);
 } 
 
+.divBorder{
+    border-bottom: 3px solid var(--Accentfärg);
+
+}
+
+.linkedInColor path{
+    fill: var(--Secondary);
+}
+
+.socialMediaText{
+    color: var(--Secondary);
+}
+
 /*#endregion*/
 
 

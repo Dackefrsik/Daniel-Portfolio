@@ -9,19 +9,22 @@ function Worklife() {
                 <div className="col-4 bgProfilePicture d-flex justify-content-center">
                     <h1 className="textColor">Worklife</h1>
                 </div>
-                <div className="col-8">
+                <div className="col-1"></div>
+                <div className="col-7">
                     <p className="mt-2">Jula</p>
                 </div>
             </div>
             <div className="row">
                 <div className="col-4 bgProfilePicture d-flex justify-content-center"></div>
-                <div className="col-8">
+                <div className="col-1"></div>
+                <div className="col-7">
                     <p>Lidl</p>
                 </div>
             </div>
             <div className="row">
                 <div className="col-4 bgProfilePicture"></div>
-                <div className="col-8">
+                <div className="col-1"></div>
+                <div className="col-7">
                     <p>Judotränare</p>
                 </div>
             </div>
