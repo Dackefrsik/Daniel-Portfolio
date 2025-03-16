@@ -7,6 +7,7 @@
     --Accentfärg: #F1C40F;
 }
 
+/*#region generell css *, html, body*/
 * {
     overflow-x: hidden;
     margin: 0px;
@@ -20,8 +21,9 @@ html {
 body {
     background-color: var(--Background);
 }
+/*#endregion*/
 
-/*#Region style för navbar*/
+/*#region style för navbar*/
 nav {
     background-color: var(--Primary);
 }
@@ -50,9 +52,11 @@ nav a:hover {
 }
 
 /*Style text*/
-.textColor{
+.textColor {
     color: var(--Secondary);
-    border-bottom: 3px solid var(--Accentfärg); /*Behöver en ny rad för varje element som ska in i vänsterkolumenen*/
+    border-bottom: 3px solid var(--Accentfärg);
+    /*Behöver en ny rad för varje element som ska in i vänsterkolumenen*/
+    font-size: 2rem;
 }
 
 
@@ -74,48 +78,93 @@ nav a:hover {
 ::-webkit-scrollbar-thumb {
     background-color: var(--Primary);
     border-radius: 10px;
-    border: 3px solid var(--Background); 
+    border: 3px solid var(--Background);
 }
 
 /*Vidrörande av scrollbaren*/
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--TexColor);
 }
+/*#endregion*/
 
-.profilePicture{
+/*#region rotation för pro filbilden*/
+.profilePicture {
     transform: rotateY(0deg);
     transform-style: preserve-3d;
     transition: transform 0.6s ease-in-out;
 }
 
-.rotate{
+.rotate {
     transform: rotateY(90deg);
-} 
+}
+/*#endregion*/
 
-.divBorder{
+/*#region rubrikerna till vänster*/
+/*Border för rubrikerena till vänster*/
+.divBorder {
     border-bottom: 3px solid var(--Accentfärg);
 
 }
 
-.linkedInColor path{
+/*Färg för texten hos rubrikerna till vänster*/
+.socialMediaText {
+    color: var(--Secondary);
+}
+/*#endregion*/
+
+/*#region ändrar färg på icons från bootstrap*/
+.linkedInColor path {
     fill: var(--Secondary);
 }
 
-.socialMediaText{
-    color: var(--Secondary);
+.arrow path {
+    fill: var(--Secondary);
 }
+/*#endregion*/
 
+/*#region tesxt som ska frpn höger till vänster*/ 
 /*Texten innan den vissas upp*/
-.textApear{
+.textApear {
     opacity: 1;
     transform: translateX(0px);
     transition: transform 2s ease;
 }
 
-.textMoveRight{
+.textMoveRight {
     opacity: 0;
     transform: translateX(300px);
 }
+/*#endregion*/
+
+/*#region bilderna som visar programmeringsspråk*/
+.programingImagePosition {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: transform 2s ease;
+}
+
+.imageToRight {
+    opacity: 0;
+    transform: translateX(300px);
+}
+/*#endregion*/
+
+/*#region nuvarande projek*/
+.currentProject {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    margin: 0.5rem;
+    opacity: 0;
+}
+
+.currentProject:hover {
+    transform: rotateY(0deg);
+    opacity: 1;
+}
+/*#en*/
+
+
 
 /*#endregion*/
 

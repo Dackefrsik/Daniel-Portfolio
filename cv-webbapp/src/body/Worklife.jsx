@@ -7,7 +7,7 @@ function Worklife() {
         <div id="Worklife" className="container-fluid">
             <div className="row">
                 <div className="col-4 bgProfilePicture d-flex justify-content-center">
-                    <h1 className="textColor">Worklife</h1>
+                    <p className="textColor">Worklife</p>
                 </div>
                 <div className="col-1"></div>
                 <div className="col-7">
@@ -31,5 +31,7 @@ function Worklife() {
         </div>
     )
 }
+
+
 
 export default Worklife;

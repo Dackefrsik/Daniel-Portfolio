@@ -6,7 +6,7 @@ function School() {
         <div id="School" className="container-fluid">
             <div className="row">
                 <div className="col-4 bgProfilePicture d-flex justify-content-center">
-                    <h1 className="textColor">School</h1>
+                    <p className="textColor">School</p>
                 </div>
                 <div className="col-1"></div>
                 <div className="col-7">
