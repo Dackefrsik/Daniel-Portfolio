@@ -144,7 +144,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="col-1"></div>
-                    <div className="col-3">
+                    <div className="col-4">
                         <p style={{ fontSize: "1.5rem" }}>Current Project </p>
                         <div className="bgProfilePicture mb-3 rounded-1">
                             <a href="https://github.com/Dackefrsik/CV-webbapp" target="_blank">
