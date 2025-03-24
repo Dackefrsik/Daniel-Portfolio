@@ -45,10 +45,6 @@ nav a:hover {
     font-size: 1rem;
     color: var(--TexColor);
 
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
-
 }
 
 /*Färgen på vänster sida*/
@@ -77,6 +73,13 @@ nav a:hover {
 ::-webkit-scrollbar-track {
     background-color: var(--Background);
     margin-top: 65px;
+}
+
+@media (max-width: 767px){
+    /*Spåret som den går i*/
+    ::-webkit-scrollbar-track {
+    margin-top: 56px;
+}
 }
 
 /*Själva scrollbaren*/
@@ -129,29 +132,35 @@ nav a:hover {
 
 /*#region tesxt som ska från höger till vänster*/ 
 /*Texten innan den vissas upp*/
+
 .textMoveRight {
     opacity: 0;
-    transform: translateX(100%);
-    transition: transform 2s ease-in, opacity 0.5s ease-out;
+    transform: translateX(100px);
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in;
 }
 
 .textApear {
     opacity: 1;
     transform: translateX(0);
 }
+
 /*#endregion*/
 
 /*#region bilderna som visar programmeringsspråk*/
-.programingImagePosition {
-    opacity: 1;
-    transform: translateX(0px);
-    transition: transform 2s ease;
-}
 
 .imageToRight {
     opacity: 0;
-    transform: translateX(300px);
+    transform: translateX(100px);
+    transition: transform 1s ease-in-out, opacity 0.5s eas-in;
 }
+
+.programingImagePosition {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in;
+}
+
+
 /*#endregion*/
 
 /*#region nuvarande projek*/

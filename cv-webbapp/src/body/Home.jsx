@@ -1,27 +1,24 @@
-
 import { useEffect, useRef, useState } from "react";
 import profilbild from "../assets/Profilbild.jpg";
 
 function Home() {
-
     const [currentDate, setCurrentDate] = useState("");
     const imgRef = useRef(null);
 
-    //#region Funkltion som räknar ut ålder
+    //#region Funktion som räknar ut ålder
     function calculateAge() {
-        let birthYear = 2000;
-        let birthMonth = 8;
-        let birthDate = 24;
-        let currentYear = new Date().getFullYear();
-        let currentMonth = new Date().getMonth();
-        let currentDate = new Date().getDay();
+        const birthYear = 2000;
+        const birthMonth = 8;
+        const birthDate = 24;
+        const currentYear = new Date().getFullYear();
+        const currentMonth = new Date().getMonth();
+        const currentDate = new Date().getDate(); // Ändra från getDay till getDate
 
         let age;
 
-        if (currentMonth >= birthMonth && birthDate >= currentDate) {
+        if (currentMonth > birthMonth || (currentMonth === birthMonth && currentDate >= birthDate)) {
             age = currentYear - birthYear;
-        }
-        else {
+        } else {
             age = currentYear - birthYear - 1;
         }
 
@@ -30,59 +27,52 @@ function Home() {
 
     useEffect(() => {
         calculateAge();
-    })
-    //#endregion
+    }, []);
 
-    //#region useEffect som körs när komponenten laddats in
     useEffect(() => {
-        //Hämtasr ut all text
-        const text = document.querySelectorAll(".textMoveRight");
+        // Hämtar ut all text
+        const textElements = document.querySelectorAll(".textMoveRight");
 
-        //Observer som kolla när texten ska in från höger
+        // Observer som kollar när texten ska in från höger
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                console.log("Intersect");
                 if (entry.isIntersecting) {
-                    //tar bort klassen som håller elementet till höger
-                    entry.target.classList.remove("textMoveRight");
+                    // Lägg till klassen som gör att elementet visas
+                    entry.target.classList.add("textApear");
                 }
-            })
-        },
-            {
-                //Görs när hela elemetet är i bild
-                threshold: 1,
-            })
+            });
+        }, {
+            // Görs när åtminstone 25% av elementet är i bild
+            threshold: 0.25,
+        });
 
-        //Lopar igenom alla txter
-        text.forEach(text => {
+        // Loopar igenom alla texter
+        textElements.forEach(text => {
             observer.observe(text);
-        })
+        });
 
-        //Hämtar ut alla bildert
-        const img = document.querySelectorAll("img");
+        // Hämtar ut alla bilder
+        const imgElements = document.querySelectorAll("img");
 
-        //Observer som kollar alla bilder
+        // Observer som kollar alla bilder
         const imgObserver = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                console.log("Intersect 2");
                 if (entry.isIntersecting) {
-                    //Lägger till kalassen rotate så de roterar rätt när der är i bild
-                    entry.target.classList.remove("rotate")
+                    // Tar bort klassen rotate
+                    entry.target.classList.remove("rotate");
                 }
-            })
-        },
-            {
-                //Sker när hela bilden är synlig
-                threshold: 1,
-            })
+            });
+        }, {
+            // Sker när hela bilden är synlig
+            threshold: 1,
+        });
 
-        //Går igenom alla bilderna och observerar dem
-        img.forEach(img => {
+        // Går igenom alla bilderna och observerar dem
+        imgElements.forEach(img => {
             imgObserver.observe(img);
-        })
+        });
 
-    }, [])
-    //#endregion
+    }, []);
 
     return (
         <>
@@ -96,46 +86,46 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="col-1 d-sm-none d-none d-md-block"></div>
+                    <div className="col-md-1"></div>
 
-                    <div className="col-12 col-md-7">
+                    <div className="col-12 col-md-7 mt-md-5">
                         <div className="row mt-md-5">
-                            <div className="col-4 col-md-4 fontHome textApear textMoveRight">
+                            <div className="col-4 col-md-4 fontHome textMoveRight">
                                 <p>Namn</p>
                             </div>
-                            <div className="col-8 col-md-8 fontHome textApear textMoveRight">
+                            <div className="col-8 col-md-8 fontHome textMoveRight">
                                 <p>Daniel Frisk</p>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-4 col-md-4 fontHome textApear textMoveRight">
+                            <div className="col-4 col-md-4 fontHome textMoveRight">
                                 <p>Ålder</p>
                             </div>
-                            <div className="col-8 col-md-8 fontHome textApear textMoveRight">
+                            <div className="col-8 col-md-8 fontHome textMoveRight">
                                 <p>{currentDate} år</p>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-4 col-md-4 fontHome textApear textMoveRight">
+                            <div className="col-4 col-md-4 fontHome textMoveRight">
                                 <p>Stad</p>
                             </div>
-                            <div className="col-8 col-md-8 fontHome textApear textMoveRight">
+                            <div className="col-8 col-md-8 fontHome textMoveRight">
                                 <p>Karlstad</p>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-4 col-md-4 fontHome textApear textMoveRight">
+                            <div className="col-4 col-md-4 fontHome textMoveRight">
                                 <p>E-mail</p>
                             </div>
-                            <div className="col-8 col-md-8 fontHome textApear textMoveRight">
+                            <div className="col-8 col-md-8 fontHome textMoveRight">
                                 <p>danielfrisk21@gmail.com</p>
                             </div>
                         </div>
                         <div className="row">
-                            <div className=" col-12 fontHome textApear textMoveRight d-none d-md-block">
+                            <div className=" col-12 fontHome textMoveRight d-none d-md-block">
                                 <p>Webbutvecklarstudent på Handelshögskolan vid Karlstads universitet</p>
                             </div>
-                            <div className="col-12 fontHome textApear textMoveRight d-block d-md-none">
+                            <div className="col-12 fontHome textMoveRight d-block d-md-none">
                                 <p>Webbutvecklarstudent</p>
                             </div>
                         </div>
@@ -144,8 +134,8 @@ function Home() {
                 <div className="row">
                     <div className="col-12 col-md-4 bgProfilePicture">
                         <div className="row">
-                            <div className="d-flex justify-content-center align-items-center">
-                                <div className="divBorder align-items-center">
+                            <div className="d-flex justify-content-center align-items-center mt-5 mt-md-0">
+                                <div className="divBorder align-items-center ">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" className="bi bi-linkedin linkedInColor me-1 mb-2" viewBox="0 0 16 16">
                                         <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
                                     </svg>
@@ -165,16 +155,16 @@ function Home() {
                         </div>
                     </div>
                     <div className="col-1 d-none d-md-block"></div>
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-md-4 d-flex justify-content-center d-md-block flex-wrap">
                         <p style={{ fontSize: "1.5rem" }}>Current Project </p>
                         <div className="bgProfilePicture mb-3 rounded-1">
                             <div className="d-flex justify-content-center">
-                            <a href="https://github.com/Dackefrsik/CV-webbapp" target="_blank"  className="currentProject ">
-                                <img alt="CV-webbapp" src="https://github-readme-stats.vercel.app/api/pin/?username=Dackefrsik&repo=CV-webbapp&theme=cobalt2"></img>
-                            </a>
+                                <a href="https://github.com/Dackefrsik/CV-webbapp" target="_blank" className="currentProject ">
+                                    <img alt="CV-webbapp" src="https://github-readme-stats.vercel.app/api/pin/?username=Dackefrsik&repo=CV-webbapp&theme=cobalt2" className="img-fluid"></img>
+                                </a>
                             </div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className="bi bi-arrow-clockwise d-flex align-itmes-start arrow" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className="bi bi-arrow-clockwise d-none d-md-flex align-itmes-start arrow" viewBox="0 0 16 16">
+                                <path fillRule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
                                 <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
                             </svg>
                         </div>
