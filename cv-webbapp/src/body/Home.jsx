@@ -88,7 +88,7 @@ function Home() {
         <>
             <div className="container-fluid" id="Home">
                 <div className="row">
-                    <div className="col-4">
+                    <div className="col-12 col-md-4">
                         <div className="row">
                             <div className="d-flex justify-content-center align-items-center bgProfilePicture ">
                                 <img src={profilbild} alt="Profilbild" className="rotate w-75 h-75 profilePicture mt-5" ref={imgRef} />
@@ -96,32 +96,53 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="col-1"></div>
+                    <div className="col-1 d-sm-none d-none d-md-block"></div>
 
-                    <div className="col-7 pt-5">
-                        <div className="row mt-5">
-                            <div className="col-2 fontHome textApear textMoveRight">Namn</div>
-                            <div className="col-3 fontHome textApear textMoveRight">Daniel Frisk</div>
+                    <div className="col-12 col-md-7">
+                        <div className="row mt-md-5">
+                            <div className="col-4 col-md-4 fontHome textApear textMoveRight">
+                                <p>Namn</p>
+                            </div>
+                            <div className="col-8 col-md-8 fontHome textApear textMoveRight">
+                                <p>Daniel Frisk</p>
+                            </div>
                         </div>
                         <div className="row">
-                            <div className="col-2 fontHome textApear textMoveRight">Ålder</div>
-                            <div className="col-2 fontHome textApear textMoveRight">{currentDate}</div>
+                            <div className="col-4 col-md-4 fontHome textApear textMoveRight">
+                                <p>Ålder</p>
+                            </div>
+                            <div className="col-8 col-md-8 fontHome textApear textMoveRight">
+                                <p>{currentDate} år</p>
+                            </div>
                         </div>
                         <div className="row">
-                            <div className="col-2 fontHome textApear textMoveRight">Stad</div>
-                            <div className="col-2 fontHome textApear textMoveRight">Karlstad</div>
+                            <div className="col-4 col-md-4 fontHome textApear textMoveRight">
+                                <p>Stad</p>
+                            </div>
+                            <div className="col-8 col-md-8 fontHome textApear textMoveRight">
+                                <p>Karlstad</p>
+                            </div>
                         </div>
                         <div className="row">
-                            <div className="col-2 fontHome textApear textMoveRight">E-mail</div>
-                            <div className="col-5 fontHome textApear textMoveRight">danielfrisk21@gmail.com</div>
+                            <div className="col-4 col-md-4 fontHome textApear textMoveRight">
+                                <p>E-mail</p>
+                            </div>
+                            <div className="col-8 col-md-8 fontHome textApear textMoveRight">
+                                <p>danielfrisk21@gmail.com</p>
+                            </div>
                         </div>
                         <div className="row">
-                            <div className="col-7 fontHome textApear textMoveRight">Webbutvecklarstudent på Handelshögskolan vid Karlstads universitet</div>
+                            <div className=" col-12 fontHome textApear textMoveRight d-none d-md-block">
+                                <p>Webbutvecklarstudent på Handelshögskolan vid Karlstads universitet</p>
+                            </div>
+                            <div className="col-12 fontHome textApear textMoveRight d-block d-md-none">
+                                <p>Webbutvecklarstudent</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-4 bgProfilePicture">
+                    <div className="col-12 col-md-4 bgProfilePicture">
                         <div className="row">
                             <div className="d-flex justify-content-center align-items-center">
                                 <div className="divBorder align-items-center">
@@ -143,14 +164,16 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-1"></div>
-                    <div className="col-4">
+                    <div className="col-1 d-none d-md-block"></div>
+                    <div className="col-12 col-md-4">
                         <p style={{ fontSize: "1.5rem" }}>Current Project </p>
                         <div className="bgProfilePicture mb-3 rounded-1">
-                            <a href="https://github.com/Dackefrsik/CV-webbapp" target="_blank">
-                                <img alt="CV-webbapp" src="https://github-readme-stats.vercel.app/api/pin/?username=Dackefrsik&repo=CV-webbapp&theme=cobalt2" className="currentProject"></img>
+                            <div className="d-flex justify-content-center">
+                            <a href="https://github.com/Dackefrsik/CV-webbapp" target="_blank"  className="currentProject ">
+                                <img alt="CV-webbapp" src="https://github-readme-stats.vercel.app/api/pin/?username=Dackefrsik&repo=CV-webbapp&theme=cobalt2"></img>
                             </a>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-arrow-clockwise d-flex align-itmes-start arrow" viewBox="0 0 16 16">
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className="bi bi-arrow-clockwise d-flex align-itmes-start arrow" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
                                 <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
                             </svg>
