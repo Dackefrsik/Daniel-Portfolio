@@ -198,6 +198,18 @@ footer{
 }
 /*#endregion*/
 
+
+.opacityBefore{
+    opacity: 0;
+    transition: opacity ease-in 0.75s;
+}
+
+.opacityAfter{
+    opacity: 1;
+    
+}
+
+
 .imgProjects{
     width: 10rem;
     height: 5rem;
