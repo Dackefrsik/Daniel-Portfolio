@@ -155,7 +155,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="col-1 d-none d-sm-block"></div>
-                    <div className="col-12 col-md-4 ">
+                    <div className="col-12 col-md-3 ">
                         <div className="d-flex justify-content-center flex-wrap d-md-block">
                             <p style={{ fontSize: "1.5rem" }}>Current Project </p>
                         </div>
