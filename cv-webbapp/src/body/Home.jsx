@@ -78,7 +78,7 @@ function Home() {
         <>
             <div className="container-fluid" id="Home">
                 <div className="row">
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-md-4 bgProfilePicture">
                         <div className="row">
                             <div className="d-flex justify-content-center align-items-center bgProfilePicture ">
                                 <img src={profilbild} alt="Profilbild" className="rotate w-75 h-75 profilePicture mt-5" ref={imgRef} />
@@ -154,9 +154,11 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-1 d-none d-md-block"></div>
-                    <div className="col-12 col-md-4 d-flex justify-content-center d-md-block flex-wrap">
-                        <p style={{ fontSize: "1.5rem" }}>Current Project </p>
+                    <div className="col-1 d-none d-sm-block"></div>
+                    <div className="col-12 col-md-4 ">
+                        <div className="d-flex justify-content-center flex-wrap d-md-block">
+                            <p style={{ fontSize: "1.5rem" }}>Current Project </p>
+                        </div>
                         <div className="bgProfilePicture mb-3 rounded-1">
                             <div className="d-flex justify-content-center">
                                 <a href="https://github.com/Dackefrsik/CV-webbapp" target="_blank" className="currentProject ">
@@ -169,6 +171,8 @@ function Home() {
                             </svg>
                         </div>
                     </div>
+                    <div className="col-1 d-none d-sm-block"></div>
+
 
                 </div>
             </div>
