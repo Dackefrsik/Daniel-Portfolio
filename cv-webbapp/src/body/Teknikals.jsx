@@ -118,8 +118,6 @@ function Teknikals() {
                 </div>
             </div>
         </div>
-
-
     )
 }
 

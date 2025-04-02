@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import profilbild from "../assets/Profilbild.jpg";
 
 function Home() {
     const [currentDate, setCurrentDate] = useState("");
@@ -81,7 +80,7 @@ function Home() {
                     <div className="col-12 col-md-4 bgProfilePicture">
                         <div className="row">
                             <div className="d-flex justify-content-center align-items-center bgProfilePicture ">
-                                <img src={profilbild} alt="Profilbild" className="rotate w-75 h-75 profilePicture mt-5" ref={imgRef} />
+                                <img src="/assets/Profilbild.jpg" alt="Profilbild" className="rotate w-75 h-75 profilePicture mt-5" ref={imgRef} />
                             </div>
                         </div>
                     </div>
