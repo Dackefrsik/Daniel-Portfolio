@@ -196,6 +196,19 @@ footer{
     color: var(--Secondary);
     font-size: 1.5rem;
 }
+
+.footerImageSize{
+    width: 1rem;
+    height: 1rem;
+}
+
+@media (min-width: 426px) {
+    .footerImageSize{
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
 /*#endregion*/
 
 /*#region image opacity*/

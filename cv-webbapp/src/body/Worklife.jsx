@@ -6,8 +6,14 @@ function Worklife() {
 
         <div id="Worklife" className="container-fluid">
             <div className="row">
-                <div className="col-4 bgProfilePicture d-flex justify-content-center">
+                <div className="col-12 col-md-4 bgProfilePicture d-flex justify-content-center">
                     <p className="textColor">Worklife</p>
+                </div>
+                <div className="col-8">
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-md-4 bgProfilePicture d-flex justify-content-center">
                 </div>
                 <div className="col-1"></div>
                 <div className="col-7">
@@ -15,14 +21,14 @@ function Worklife() {
                 </div>
             </div>
             <div className="row">
-                <div className="col-4 bgProfilePicture d-flex justify-content-center"></div>
+                <div className="col-md-4 bgProfilePicture d-flex justify-content-center"></div>
                 <div className="col-1"></div>
                 <div className="col-7">
                     <p>Lidl</p>
                 </div>
             </div>
             <div className="row">
-                <div className="col-4 bgProfilePicture"></div>
+                <div className="col-md-4 bgProfilePicture"></div>
                 <div className="col-1"></div>
                 <div className="col-7">
                     <p>Judotränare</p>

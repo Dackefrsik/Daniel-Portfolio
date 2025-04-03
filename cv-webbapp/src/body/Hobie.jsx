@@ -81,15 +81,15 @@ function Hobie({ observer }) {
                 </div>
             </div>
             <div className="row">
-                <div className="col-4 bgProfilePicture"></div>
-                <div className="col-1"></div>
+                <div className="col-md-4 bgProfilePicture"></div>
+                <div className="col-md-1"></div>
                 <div className="col-7">
                     <p>Träna</p>
                 </div>
             </div>
             <div className="row">
-                <div className="col-4 bgProfilePicture"></div>
-                <div className="col-1"></div>
+                <div className="col-md-4 bgProfilePicture"></div>
+                <div className="col-md-1"></div>
                 <div className="col-7">
                     <p>Programmera</p>
                 </div>
