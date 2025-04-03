@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-function Home() {
+function Home({observer}) {
     const [currentDate, setCurrentDate] = useState("");
     const imgRef = useRef(null);
 
@@ -32,19 +32,6 @@ function Home() {
         // Hämtar ut all text
         const textElements = document.querySelectorAll(".textMoveRight");
 
-        // Observer som kollar när texten ska in från höger
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Lägg till klassen som gör att elementet visas
-                    entry.target.classList.add("textApear");
-                }
-            });
-        }, {
-            // Görs när åtminstone 25% av elementet är i bild
-            threshold: 0.25,
-        });
-
         // Loopar igenom alla texter
         textElements.forEach(text => {
             observer.observe(text);
@@ -71,7 +58,7 @@ function Home() {
             imgObserver.observe(img);
         });
 
-    }, []);
+    });
 
     return (
         <>
@@ -178,5 +165,7 @@ function Home() {
         </>
     )
 }
+
+
 
 export default Home;

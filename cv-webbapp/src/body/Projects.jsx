@@ -39,6 +39,11 @@ function Projects() {
                 <div className="col-12 col-md-4 bgProfilePicture d-flex justify-content-center">
                     <p className="textColor">Projects</p>
                 </div>
+                <div className="col-md-8 bgProfilePicture"></div>
+            </div>
+            <div className="row">
+                <div className="col-12 col-md-4 bgProfilePicture d-flex justify-content-center">
+                </div>
                 <div className="col-md-1 bgProfilePicture"></div>
                 <div className="d-none d-md-block col-md-7 bgProfilePicture p-md-2">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" alt="HTML5" className="imgProjects programingImagePosition opacityBefore" />

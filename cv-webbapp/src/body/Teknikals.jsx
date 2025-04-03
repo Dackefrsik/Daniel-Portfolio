@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-function Teknikals() {
+function Teknikals({observer}) {
 
     //#region useEffect för bilderna på programmeringstekniker
     useEffect(() => {
@@ -8,25 +8,9 @@ function Teknikals() {
         //Hämtar alla bildr
         let imgRefs = document.querySelectorAll("img")
 
-        //Observer som tar in dem i bild när de nås i y-led
-        const observe = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("programingImagePosition")
-                }
-                else {
-                    entry.target.classList.remove("programingImagePosition")
-                }
-            })
-        },
-            {
-                //Görs när hela bilden är i synlig i y-led
-                threshold: 0.5,
-            })
-
         //Går igenom alla bilderna och observerar dem
         imgRefs.forEach(img => {
-            observe.observe(img);
+            observer.observe(img);
         })
     })
     //#endregion
@@ -37,6 +21,11 @@ function Teknikals() {
             <div className="row">
                 <div className="col-12 col-md-4 bgProfilePicture d-flex justify-content-center mb-2 mb-md-0">
                     <p className="textColor">ProgramminTekniks</p>
+                </div>
+                <div className="col-md-1"></div>
+            </div>
+            <div className="row">
+                <div className="col-12 col-md-4 bgProfilePicture d-flex justify-content-center mb-2 mb-md-0">
                 </div>
                 <div className="col-md-1"></div>
                 <div className="col-12 col-md-3 d-flex d-md-block justify-content-center">

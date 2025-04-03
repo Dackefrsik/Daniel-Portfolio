@@ -131,7 +131,7 @@ nav a:hover {
 }
 /*#endregion*/
 
-/*#region tesxt som ska från höger till vänster*/ 
+/*#region tesxt som ska från höger till vänster*/  
 /*Texten innan den vissas upp*/
 
 .textMoveRight {
@@ -170,7 +170,7 @@ nav a:hover {
     margin: 0.5rem;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 426px) {
 
     .currentProject {
         transform: rotateY(180deg);
@@ -198,7 +198,7 @@ footer{
 }
 /*#endregion*/
 
-
+/*#region image opacity*/
 .opacityBefore{
     opacity: 0;
     transition: opacity ease-in 0.75s;
@@ -208,7 +208,7 @@ footer{
     opacity: 1;
     
 }
-
+/*#endregion*/
 
 .imgProjects{
     width: 10rem;
