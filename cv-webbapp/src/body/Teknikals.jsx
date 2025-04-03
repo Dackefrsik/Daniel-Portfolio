@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-function Teknikals({observer}) {
+function Teknikals({ observer }) {
 
     //#region useEffect för bilderna på programmeringstekniker
     useEffect(() => {
@@ -100,10 +100,20 @@ function Teknikals({observer}) {
                 <div className="col-md-4 bgProfilePicture"></div>
                 <div className="col-md-1"></div>
                 <div className="col-12 col-md-3 d-flex d-md-block justify-content-center">
-                    <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C" className="w-75 h-75 imageToRight  " />
+                    <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" className="w-75 h-75 imageToRight" />
                 </div>
                 <div className="col-12 col-md-3 d-flex d-md-block justify-content-center">
                     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" className="w-75 h-75 imageToRight" />
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-md-4 bgProfilePicture"></div>
+                <div className="col-md-1"></div>
+                <div className="col-12 col-md-3 d-flex d-md-block justify-content-center">
+                    <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" className="w-75 h-75 imageToRight" />
+                </div>
+                <div className="col-12 col-md-3 d-flex d-md-block justify-content-center">
+                    <img src="https://img.shields.io/badge/REST%20API-009688?style=for-the-badge&logo=api&logoColor=white" alt="REST API" className="w-75 h-75 imageToRight" />
                 </div>
             </div>
         </div>
