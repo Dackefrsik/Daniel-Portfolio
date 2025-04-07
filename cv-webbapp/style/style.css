@@ -24,8 +24,15 @@ body {
 /*#endregion*/
 
 /*#region style för navbar*/
-nav {
-    background-color: var(--Primary);
+@media  (min-width: 768px) {
+    nav{
+        background-color: var(--Primary);
+    }
+
+    .custom-toggler{
+        display: none;
+    }
+    
 }
 
 nav a {
@@ -38,6 +45,42 @@ nav a {
 nav a:hover {
     border-bottom: 3px solid var(--Accentfärg);
 }
+
+@media (max-width: 767px) {
+
+    nav{
+        margin-top: 50vh;
+    }
+
+    .custom-toggler{
+        width: 3rem;
+        background-color: var(--Primary);
+        border: none;
+    }
+
+    .navbar-nav{
+        background-color: var(--Primary);
+
+    }
+    
+}
+
+/* @media (max-width: 991px) {
+
+    nav{
+        height: 65px;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    
+    nav{
+        height: 50px;
+    }
+} */
+
+
 /*#endregion*/
 
 /*Font i komponenten Home*/
@@ -59,7 +102,6 @@ nav a:hover {
     /*Behöver en ny rad för varje element som ska in i vänsterkolumenen*/
     font-size: 2rem;
 }
-
 
 
 /*#region scrollbar*/
@@ -129,6 +171,16 @@ nav a:hover {
 .arrow path {
     fill: var(--Secondary);
 }
+/*#endregion*/
+
+/*#region hobies*/
+
+.imageHobieToRight{
+    opacity: 0;
+    transform: translateX(200px);
+    transition: transform 1s ease-in-out, opacity 0.75s ease-in;
+}
+
 /*#endregion*/
 
 /*#region tesxt som ska från höger till vänster*/  
@@ -222,6 +274,7 @@ footer{
     
 }
 /*#endregion*/
+
 
 .imgProjects{
     width: 10rem;

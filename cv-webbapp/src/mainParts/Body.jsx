@@ -1,6 +1,4 @@
 import Home from "../body/Home";
-import Worklife from "../body/Worklife";
-import School from "../body/School";
 import Hobie from "../body/Hobie";
 import Teknikals from "../body/Teknikals";
 import Projects from "../body/Projects";
@@ -10,6 +8,7 @@ function Body() {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                console.log(entry.target)
                 // Lägg till klassen som gör att elementet visas
                 entry.target.classList.add("textApear");
             }
@@ -43,8 +42,6 @@ function Body() {
             <Home observer={observer}/>
             <Teknikals observer={observer2}/>
             <Projects/>
-            <Worklife />
-            <School />
             <Hobie observer={observer}/>
         </>
 
