@@ -37,11 +37,25 @@ function Body() {
         })
     //#endregion 
 
+    const observer3 = new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("opacityAfter")
+            }
+        },
+            {
+                //Görs när halva bilden visas
+                threshold: 0.5
+            })
+    })
+
     return (
         <>
-            <Home observer={observer}/>
+            <Home observer={observer} observer2={observer3}/>
             <Teknikals observer={observer2}/>
-            <Projects/>
+            <Projects observer={observer3}/>
             <Hobie observer={observer}/>
         </>
 

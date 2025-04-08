@@ -7,6 +7,25 @@
   --Accentfärg: #f1c40f;
 }
 
+/*Font i komponenten Home*/
+.fontHome {
+  font-size: 1rem;
+  color: var(--TexColor);
+}
+
+/*Färgen på vänster sida*/
+.bgProfilePicture {
+  background-color: var(--TexColor);
+}
+
+/*Style text*/
+.textColor {
+  color: var(--Secondary);
+  border-bottom: 3px solid var(--Accentfärg);
+  /*Behöver en ny rad för varje element som ska in i vänsterkolumenen*/
+  font-size: 2rem;
+}
+
 /*#region generell css *, html, body*/
 * {
   overflow-x: hidden;
@@ -60,10 +79,10 @@ nav a:hover {
     display: block;
   }
 
-  .border-right-radius {
+  /* .border-right-radius {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-  }
+  } */
 
   .navbar-nav {
     background-color: var(--Primary);
@@ -114,25 +133,6 @@ nav a:hover {
   width: 2rem;
 }
 /*#endregion*/
-
-/*Font i komponenten Home*/
-.fontHome {
-  font-size: 1rem;
-  color: var(--TexColor);
-}
-
-/*Färgen på vänster sida*/
-.bgProfilePicture {
-  background-color: var(--TexColor);
-}
-
-/*Style text*/
-.textColor {
-  color: var(--Secondary);
-  border-bottom: 3px solid var(--Accentfärg);
-  /*Behöver en ny rad för varje element som ska in i vänsterkolumenen*/
-  font-size: 2rem;
-}
 
 /*#region scrollbar*/
 /*Ytan för scrollbar*/
@@ -263,6 +263,13 @@ nav a:hover {
   }
 }
 
+@media (max-width: 425px) {
+  .currentProject{
+    opacity: 0;
+    transition: opacity 0.75s ease-in;
+  }
+  
+}
 /*#endregion*/
 
 /*#region footer*/
@@ -289,10 +296,15 @@ footer {
 
 /*#endregion*/
 
-/*#region image opacity*/
+/*#region image projects*/
+.imgProjects {
+  width: 10rem;
+  height: 5rem;
+}
+
 .opacityBefore {
   opacity: 0;
-  transition: opacity ease-in 0.75s;
+  transition: opacity 0.75s ease-in;
 }
 
 .opacityAfter {
@@ -300,12 +312,24 @@ footer {
 }
 /*#endregion*/
 
-.imgProjects {
-  width: 10rem;
-  height: 5rem;
+/*#region Tex CurrentProject på små skärmar*/
+@media (max-width: 767px) {
+  .backgorund-sm{
+    background-color: var(--TexColor);
+  } 
+
+  .textColor-sm{
+    color: var(--Secondary);
+    border-bottom: 3px solid var(--Accentfärg);
+    font-size: 1.5rem;
+  }
 }
 
-/*Test CSS*/
-/* #Hobie{
-    height: 600px;
-} */
+@media (min-width: 768px) {
+  .textColor-md{
+    font-size: 2rem;
+  }
+}
+
+/*#endregion*/
+

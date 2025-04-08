@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
-function Home({observer}) {
+function Home({observer, observer2}) {
     const [currentDate, setCurrentDate] = useState("");
     const imgRef = useRef(null);
+
+    const [windowWidth, setCurrentWidth] = useState(window.innerWidth);
 
     //#region Funktion som räknar ut ålder
     function calculateAge() {
@@ -27,6 +29,7 @@ function Home({observer}) {
     useEffect(() => {
         calculateAge();
     }, []);
+    //#endregion
 
     useEffect(() => {
         // Hämtar ut all text
@@ -57,6 +60,21 @@ function Home({observer}) {
         imgElements.forEach(img => {
             imgObserver.observe(img);
         });
+
+        const handelResize = () => {setCurrentWidth(window.innerWidth)}
+
+        window.addEventListener("resize",  handelResize)
+
+        const currentProjectRef = document.querySelector(".currentProject");
+
+        if(currentProjectRef){
+            if(windowWidth <= 425){
+                observer2.observe(currentProjectRef);
+            }
+            else if(currentProjectRef.classList.contains("opacityAfter")){
+                currentProjectRef.classList.remove("opacityAfter");
+            }
+        }
 
     });
 
@@ -141,9 +159,9 @@ function Home({observer}) {
                         </div>
                     </div>
                     <div className="col-1 d-none d-sm-block"></div>
-                    <div className="col-12 col-md-3 ">
+                    <div className="col-12 col-md-3 backgorund-sm">
                         <div className="d-flex justify-content-center flex-wrap d-md-block">
-                            <p style={{ fontSize: "1.5rem" }}>Current Project </p>
+                            <p className="textColor-sm textColor-md">Current Project </p>
                         </div>
                         <div className="bgProfilePicture mb-3 rounded-1">
                             <div className="d-flex justify-content-center">

@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 
 //Komponent som visar projekt
-function Projects() {
+function Projects({observer}) {
 
     /*#region useefect som kör animationer*/
     useEffect(() => {
@@ -11,18 +11,7 @@ function Projects() {
 
 
         //IntersectObserver som visar bilderna genom att sätta opaciteten till 1
-        const observer = new IntersectionObserver(entries => {
-
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("opacityAfter")
-                }
-            },
-                {
-                    //Görs när halva bilden visas
-                    threshold: 0.5
-                })
-        })
+        
 
         //Lopar igenom alla bilder och observerar dem
         imgRef.forEach(img => {

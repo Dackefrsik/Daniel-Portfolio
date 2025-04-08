@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-function Hobie({ observer }) {
+function Hobie({ observer}) {
 
     useEffect(() => {
 
@@ -10,6 +10,7 @@ function Hobie({ observer }) {
             observer.observe(img);
         })
 
+        
 
     })
 
@@ -22,7 +23,7 @@ function Hobie({ observer }) {
                 </div>
                 <div className="col-md-1"></div>
                 <div className="col-12 col-md-7 d-flex justify-content-center d-md-block">
-                    <p className="mt-2 imageHobieToRight">Resa</p>
+                    <p className="mt-2 imageHobieToRight fs-3">Resa</p>
                 </div>
             </div>
             <div className="row">
@@ -80,13 +81,13 @@ function Hobie({ observer }) {
                     <p className="imageHobieToRight">Tempelbar Dublin 2025</p>
                 </div>
             </div>
-            <div className="row">
+            {/* <div className="row">
                 <div className="col-md-4 bgProfilePicture"></div>
                 <div className="col-md-1"></div>
                 <div className="col-7">
                     <p>Träna</p>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
