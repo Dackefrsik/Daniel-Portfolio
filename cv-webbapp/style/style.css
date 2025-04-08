@@ -56,6 +56,13 @@ nav a:hover {
         width: 3rem;
         background-color: var(--Primary);
         border: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .border-right-radius{
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
 
     .navbar-nav{
