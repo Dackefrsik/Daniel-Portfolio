@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from "react";
 
 function Navbar() {
 
-    //useEffect för att hantera klassen show på diven collapse
+    //useState för att hantera klassen show på diven collapse
     const collapseRef = useRef(null);
+
+    const menuButton = useRef(null);
 
     //useState för höger border-radius
     const[isRounded, steClass] = useState(true);
@@ -27,6 +29,7 @@ function Navbar() {
         if(isMenueOpen == true){
             setMenueOpen(false);
             steClass(true);
+            menuButton.current.removeAttribute("aria-expanded");
         }
     }
     //#endregion
@@ -36,8 +39,10 @@ function Navbar() {
             <nav className="navbar navbar-expand-md fixed-top">
                 <div className="container-fluid d-flex justify-content-end">
                     <div className="d-flex align-items-start d-flex justify-content-center">
-                        <button className={`custom-toggler ${isRounded ? "border-right-radius" : ""}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" onClick={openMenu}>
-                            <span className="navbar-toggler-icon"></span>
+                        <button className={`ps-1 pe-1 pt-1 pb-1 custom-toggler ${isRounded ? "border-right-radius" : ""}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" ref={menuButton} onClick={openMenu}>
+                            <span className="navbar-toggler-top"></span>
+                            <span className="navbar-toggler-middle"></span>
+                            <span className="navbar-toggler-bottom"></span>
                         </button>
                         <div className={`collapse navbar-collapse ${isMenueOpen ? "Show" : ""} `} id="navbarNavAltMarkup" ref={collapseRef}>
                             <div className="navbar-nav">
