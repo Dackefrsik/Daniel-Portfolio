@@ -74,6 +74,7 @@ nav a:hover {
 
 /*#region navbar-toggler*/
 
+/*Grund postitionen på sträcken i hamburgarmenyn*/
 .navbar-toggler-top,
 .navbar-toggler-middle,
 .navbar-toggler-bottom {
@@ -86,21 +87,17 @@ nav a:hover {
   transform-origin: center;
 }
 
-.navbar-toggler-middle {
-  margin-top: 3px;
-  margin-bottom: 3px;
-}
-
 .navbar-toggler-top {
   top: 0.7rem;
 }
 .navbar-toggler-middle {
-  top: 1.2rem;
+  top: 1.35rem;
 }
 .navbar-toggler-bottom {
   top: 2rem;
 }
 
+/*Effekten när användaren klicak på den*/
 .custom-toggler[aria-expanded="true"] .navbar-toggler-top {
   top: 1.3rem;
   transform: rotate(45deg);
@@ -116,8 +113,8 @@ nav a:hover {
   transform: rotate(-45deg);
   width: 2rem;
 }
-
 /*#endregion*/
+
 /*Font i komponenten Home*/
 .fontHome {
   font-size: 1rem;
