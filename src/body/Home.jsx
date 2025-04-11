@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import profilePicture from "../assets/Profilbild.jpg"
+
 
 function Home({observer, observer2}) {
     const [currentDate, setCurrentDate] = useState("");
@@ -85,7 +87,7 @@ function Home({observer, observer2}) {
                     <div className="col-12 col-md-4 bgProfilePicture">
                         <div className="row">
                             <div className="d-flex justify-content-center align-items-center bgProfilePicture">
-                                <img src="/assets/Profilbild.jpg" alt="Profilbild" className="rotate w-75 h-75 profilePicture mt-5" ref={imgRef} />
+                                <img src={profilePicture} alt="ProfilePicture" className="rotate w-75 h-75 profilePicture mt-5" ref={imgRef} />
                             </div>
                         </div>
                     </div>
@@ -94,7 +96,7 @@ function Home({observer, observer2}) {
 
                     <div className="col-12 col-md-7 mt-md-5">
                         <div className="row mt-md-5">
-                            <div className="col-4 col-md-4 fontHome textMoveRight">
+                            <div className="d-none d-md-block col-4 col-md-4 fontHome textMoveRight">
                                 <p>Namn</p>
                             </div>
                             <div className="col-8 col-md-8 fontHome textMoveRight">
@@ -102,7 +104,7 @@ function Home({observer, observer2}) {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-4 col-md-4 fontHome textMoveRight">
+                            <div className="d-none d-md-block col-4 col-md-4 fontHome textMoveRight">
                                 <p>Ålder</p>
                             </div>
                             <div className="col-8 col-md-8 fontHome textMoveRight">
@@ -110,7 +112,7 @@ function Home({observer, observer2}) {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-4 col-md-4 fontHome textMoveRight">
+                            <div className="d-none d-md-block col-4 col-md-4 fontHome textMoveRight">
                                 <p>Stad</p>
                             </div>
                             <div className="col-8 col-md-8 fontHome textMoveRight">
@@ -118,15 +120,15 @@ function Home({observer, observer2}) {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-4 col-md-4 fontHome textMoveRight">
+                            <div className="d-none d-md-block col-4 col-md-4 fontHome textMoveRight">
                                 <p>E-mail</p>
                             </div>
-                            <div className="col-8 col-md-8 fontHome textMoveRight">
+                            <div className="col-sm-12 col-md-8 fontHome textMoveRight">
                                 <p>danielfrisk21@gmail.com</p>
                             </div>
                         </div>
                         <div className="row">
-                            <div className=" col-12 fontHome textMoveRight d-none d-md-block">
+                            <div className="col-12 fontHome textMoveRight d-none d-md-block">
                                 <p>Webbutvecklarstudent på Handelshögskolan vid Karlstads universitet</p>
                             </div>
                             <div className="col-12 fontHome textMoveRight d-block d-md-none">

@@ -1,4 +1,9 @@
 import { useEffect } from "react";
+import LennonWall from "../assets/LennonWall_Praha.jpg";
+import OldTownRiga from "../assets/Old_Town_Riga.jpg";
+import Nyhaven from "../assets/Nyhaven_Kopenhagen.jpg";
+import The_Bee_Gees from "../assets/The_Bee_Gees.jpg";
+import Tempelbar from "../assets/Tempelbar_Dublin.jpg";
 
 function Hobie({ observer}) {
 
@@ -31,7 +36,7 @@ function Hobie({ observer}) {
                 </div>
                 <div className="col-md-1"></div>
                 <div className="col-12 col-md-3 pb-2">
-                    <img src="/assets/Lennonwall_Praha.JPG" alt="Lennonwall_Praha" className="w-100 h-100 w-md-75 h-md-75 imageHobieToRight" />
+                    <img src={LennonWall} alt="Lennonwall_Praha" className="w-100 h-100 w-md-75 h-md-75 imageHobieToRight" />
                 </div>
                 <div className="col-12 col-md-2 d-flex align-items-center">
                     <p className="imageHobieToRight">Lennonwall Praha 2021</p>
@@ -45,7 +50,7 @@ function Hobie({ observer}) {
                     <p className="imageHobieToRight">Old town Riga 2023</p>
                 </div>
                 <div className="col-md-3 order-md-1 pb-2">
-                    <img src="/assets/Old_Town_Riga.JPG" alt="Old_Town_Riga" className="w-100 h-100 w-md-75 h-md-75 imageHobieToRight" />
+                    <img src={OldTownRiga} alt="Old_Town_Riga" className="w-100 h-100 w-md-75 h-md-75 imageHobieToRight" />
                 </div>
             </div>
             <div className="row">
@@ -53,7 +58,7 @@ function Hobie({ observer}) {
                 </div>
                 <div className="col-md-1"></div>
                 <div className="col-12 col-md-3 pb-2">
-                    <img src="/assets/Nyhven_Kopenhagen.JPG" alt="Nyhavn" className="w-100 h-100 w-md-75 h-md-75 imageHobieToRight" />
+                    <img src={Nyhaven} alt="Nyhavn" className="w-100 h-100 w-md-75 h-md-75 imageHobieToRight" />
                 </div>
                 <div className="col-md-2 d-flex align-items-center">
                     <p className="imageHobieToRight">Nyhavn Kopenhagen 2023</p>
@@ -67,7 +72,7 @@ function Hobie({ observer}) {
                     <p className="imageHobieToRight">Douglas, Isle of Man 2025</p>
                 </div>
                 <div className="col-12 col-md-3 pb-2">
-                    <img src="/assets/The_Bee_Gees.jpg" alt="The_Bee_Gees" className="w-100 h-100 w-md-75 h-md-75 imageHobieToRight" />
+                    <img src={The_Bee_Gees} alt="The_Bee_Gees" className="w-100 h-100 w-md-75 h-md-75 imageHobieToRight" />
                 </div>
             </div>
             <div className="row">
@@ -75,7 +80,7 @@ function Hobie({ observer}) {
                 </div>
                 <div className="col-md-1"></div>
                 <div className="col-12 col-md-3 pb-2">
-                    <img src="/assets/Tempelbar_Dublin.jpg" alt="Tempelbar Dublin" className="w-100 h-100 w-md-75 h-md-75 imageHobieToRight" />
+                    <img src={Tempelbar} alt="Tempelbar Dublin" className="w-100 h-100 w-md-75 h-md-75 imageHobieToRight" />
                 </div>
                 <div className="col-md-2 d-flex align-items-center"> 
                     <p className="imageHobieToRight">Tempelbar Dublin 2025</p>

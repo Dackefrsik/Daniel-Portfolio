@@ -1,4 +1,4 @@
-import {useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 function Navbar() {
 
@@ -8,25 +8,25 @@ function Navbar() {
     const menuButton = useRef(null);
 
     //useState för höger border-radius
-    const[isRounded, steClass] = useState(true);
+    const [isRounded, steClass] = useState(true);
 
     //useState för att kolla om menyn är öppen
-    const[isMenueOpen, setMenueOpen] = useState(false);
+    const [isMenueOpen, setMenueOpen] = useState(false);
 
     //#region Funktioner för att öppna och stännga hamburgermenyn
     const openMenu = () => {
-        if(isRounded == true){
+        if (isRounded == true) {
             steClass(false);
             setMenueOpen(true);
         }
-        else if(isRounded == false){
+        else if (isRounded == false) {
             steClass(true);
             setMenueOpen(false);
         }
     }
 
     const closeMenue = () => {
-        if(isMenueOpen == true){
+        if (isMenueOpen == true) {
             setMenueOpen(false);
             steClass(true);
             menuButton.current.removeAttribute("aria-expanded");
@@ -46,10 +46,20 @@ function Navbar() {
                         </button>
                         <div className={`collapse navbar-collapse ${isMenueOpen ? "Show" : ""} `} id="navbarNavAltMarkup" ref={collapseRef}>
                             <div className="ms-md-5 navbar-nav">
-                                <a className="active m-2" aria-current="page" href="#Home" onClick={closeMenue}>Home</a>
-                                <a className="m-2" href="#Tekniks" onClick={closeMenue}>ProgrammingTekniks</a>
-                                <a className="m-2" href="#Projects" onClick={closeMenue}>Projects</a>
-                                <a className="m-2" href="#Hobie" onClick={closeMenue}>Hobies</a>
+                                <ul className="d-md-flex flex-row">
+                                    <li>
+                                        <a className="active m-2" aria-current="page" href="#Home" onClick={closeMenue}>Home</a>
+                                    </li>
+                                    <li>
+                                        <a className="m-2" href="#Tekniks" onClick={closeMenue}>ProgrammingTekniks</a>
+                                    </li>
+                                    <li>
+                                        <a className="m-2" href="#Projects" onClick={closeMenue}>Projects</a>
+                                    </li>
+                                    <li>
+                                        <a className="m-2" href="#Hobie" onClick={closeMenue}>Hobies</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

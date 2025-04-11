@@ -9,7 +9,7 @@
 
 /*Font i komponenten Home*/
 .fontHome {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: var(--TexColor);
 }
 
@@ -28,6 +28,7 @@
 
 /*#region generell css *, html, body*/
 * {
+  font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
   margin: 0px;
   padding: 0px;
@@ -231,7 +232,7 @@ nav a:hover {
 
 .imageToRight {
   opacity: 0;
-  transform: translateX(100px);
+  transform: translateX(50px);
   transition: transform 1s ease-in-out, opacity 0.5s eas-in;
 }
 
